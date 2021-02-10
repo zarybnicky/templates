@@ -1,0 +1,11 @@
+config.php
+*~
+[#]*[#]
+.direnv/
+.ghc.environment*
+dist/
+dist-newstyle/
+.stack-work/
+cabal.project.local
+result
+.hie

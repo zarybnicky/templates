@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+.mypy_cache/
+.direnv/
+jupyterlab/
