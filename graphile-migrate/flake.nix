@@ -8,7 +8,6 @@
       system = "x86_64-linux";
       overlays = [
         graphile-migrate-flake.overlays.default
-        self.overlays.default
       ];
     };
   in {
@@ -24,8 +23,16 @@
             pkgs.pgformatter
           ];
 
-          services = {
-            postgresql.enable = true;
+          services.postgres = {
+            enable = true;
+            package = pkgs.postgresql_15;
+            initialDatabases = [
+              { name = "mergestat"; }
+              { name = "mergestat-shadow"; }
+            ];
+            initialScript = ''
+              CREATE USER postgres SUPERUSER;
+            '';
           };
         })
       ];

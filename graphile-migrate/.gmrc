@@ -49,20 +49,20 @@
    * afterReset: actions executed after a `graphile-migrate reset` command.
    */
   "afterReset": [
-    # "!roles_extensions.sql",
-    # "!initial_schema.sql",
-    # { "_": "command", "command": "cd backend/ && yarn worker-schema" },
+    // "!roles_extensions.sql",
+    // "!initial_schema.sql",
+    // { "_": "command", "command": "cd backend/ && yarn worker-schema" },
   ],
 
   /*
    * afterAllMigrations: actions executed once all migrations are complete.
    */
   "afterAllMigrations": [
-    # {
-    #   "_": "command",
-    #   "shadow": true,
-    #   "command": "if [ \"$IN_TESTS\" != \"1\" ]; then pg_dump --no-sync --schema-only --no-owner --exclude-schema=postgraphile_watch --exclude-schema=graphile_migrate --exclude-schema=graphile_worker --exclude-schema=hdb_catalog --file=schema.sql $GM_DBURL && python schema-split.py schema.sql; fi",
-    # },
+    // {
+    //   "_": "command",
+    //   "shadow": true,
+    //   "command": "if [ \"$IN_TESTS\" != \"1\" ]; then pg_dump --no-sync --schema-only --no-owner --exclude-schema=postgraphile_watch --exclude-schema=graphile_migrate --exclude-schema=graphile_worker --exclude-schema=hdb_catalog --file=schema.sql $GM_DBURL && python schema-split.py schema.sql; fi",
+    // },
   ],
 
   /*
